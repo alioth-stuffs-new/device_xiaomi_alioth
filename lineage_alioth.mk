@@ -27,3 +27,21 @@ PRODUCT_MODEL := POCO F3
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 BUILD_FINGERPRINT := POCO/alioth_global/alioth:13/TKQ1.221114.001/V816.0.2.0.TKHMIXM:user/release-keys
+
+# Signed
+$(call inherit-product, vendor/asif-priv/keys/product.mk)
+
+# Flags
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_ENABLE_BLUR := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
+WITH_GMS := false
+RISING_BUILDTYPE := COMMUNITY
+RISING_MAINTAINER := nhAsif
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER = false
+TARGET_EXCLUDES_AUDIOFX := true
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Snapdragon 870" \
+    RisingMaintainer="nhAsif"

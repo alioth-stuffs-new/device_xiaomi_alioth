@@ -15,6 +15,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_USES_MIUI_CAMERA := true
 TARGET_INCLUDES_MIUI_CAMERA := true
 
+EVO_BUILD_TYPE := Fan-Edition
+
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 

@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
 # Miui Camera
 include vendor/xiaomi/camera/miuicamera.mk
 
+# Sign
+-include vendor/lineage-priv/keys/keys.mk
+
 # Miui Camera STLicense
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/st_license.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/st_license.lic
